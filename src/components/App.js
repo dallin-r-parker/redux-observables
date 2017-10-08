@@ -18,9 +18,4 @@ function mapStateToProps(reducer) {
 
 App = connect(mapStateToProps, { ping })(App);
 
-// App = connect(
-//     ({isPinging}) => ({ isPinging }),
-//     { ping }
-// )(App);
-
 export default App
