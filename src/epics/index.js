@@ -1,10 +1,18 @@
 export const pingEpic = action$ => {
-   const action =  action$.ofType('PING');
-   console.log('action: ', action);
-   action.delay(1000);
-   const theMap = action.mapTo({type: 'PONG'});
-    console.log('theMap: ', theMap);
-    return theMap
+   return action$.ofType('PING')
+       .delay(1000)
+       .map(payload => {
+           console.log('epic payload: ', payload);
+          return {type: 'PONG'}
+       });
+
+
+
+   // console.log('action: ', action);
+   // action.delay(1000);
+   // const theMap = action.mapTo({type: 'PONG'});
+   //  console.log('theMap: ', theMap);
+   //  return theMap
         // .delay(1000)
         // .mapTo({type: 'PONG'});
 };
