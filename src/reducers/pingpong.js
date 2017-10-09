@@ -3,7 +3,6 @@ const initialState = {
 };
 
 export default (state = initialState, {type}) => {
-    console.log("inside reducer", type);
     switch (type) {
         case 'PING':
             return { isPinging: true};

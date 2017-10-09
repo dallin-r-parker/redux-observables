@@ -1,11 +1,11 @@
 export const pingEpic = action$ => {
-   return action$.ofType('PING')
-       .delay(1000)
-       .map(payload => {
-           console.log('epic payload: ', payload);
-          return {type: 'PONG'}
-       });
-
+    return action$.ofType('PING')
+        .delay(1000)
+        .map(payload => {
+            console.log('epic payload: ', payload);
+            return {type: 'PONG'}
+        });
+};
 
 
    // console.log('action: ', action);
@@ -15,5 +15,5 @@ export const pingEpic = action$ => {
    //  return theMap
         // .delay(1000)
         // .mapTo({type: 'PONG'});
-};
+// };
 // THE EPIC IS USED AFTER IT'S BEEN THROUGH THE REDUCER!

@@ -3,11 +3,11 @@ import React from 'react';
 let List = (props) => (
     <div className="list-container">
         <ul>
-            <li>Name: </li>
-            <li>Height: </li>
-            <li>Hair Color: </li>
-            <li>Eye Color: </li>
-            <li>Home world: </li>
+            <li>Name: {props.name}</li>
+            <li>Height: {props.height}</li>
+            <li>Hair Color: {props.hairColor}</li>
+            <li>Eye Color: {props.eyeColor}</li>
+            <li>Home world: <a href={props.homeworld}>Find Out</a></li>
         </ul>
     </div>
 );
